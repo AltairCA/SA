@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SA.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,15 @@ namespace SA.Views
 {
     public partial class Home : Form
     {
+        private static AppContext db = new AppContext();
         public Home()
         {
             InitializeComponent();
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
