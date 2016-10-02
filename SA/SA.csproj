@@ -78,6 +78,10 @@
     <Compile Include="Migrations\201610020756004_gg.Designer.cs">
       <DependentUpon>201610020756004_gg.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610020835440_asdasd.cs" />
+    <Compile Include="Migrations\201610020835440_asdasd.Designer.cs">
+      <DependentUpon>201610020835440_asdasd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppContext.cs" />
     <Compile Include="Models\Category.cs" />
@@ -131,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610020756004_gg.resx">
       <DependentUpon>201610020756004_gg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610020835440_asdasd.resx">
+      <DependentUpon>201610020835440_asdasd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

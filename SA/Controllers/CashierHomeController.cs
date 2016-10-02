@@ -59,6 +59,7 @@ namespace SA.Controllers
 
                 context.FoodItems.Add(item);
             }
+            context.SaveChanges();
 
             for (int i = 0; i < 10; i++)
             {
@@ -81,6 +82,8 @@ namespace SA.Controllers
                 
                 context.Orders.Add(order);
             }
+
+            context.SaveChanges();
         }
     }
 }
