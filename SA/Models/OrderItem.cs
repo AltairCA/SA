@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-
 namespace SA.Models
 {
-    public class FoodItem
+    public class OrderItem
     {
-       [Key]
+        [Key]
         public int id { get; set; }
-        public string itemName { get; set; }
-        public float price { get; set; }
+
+        public FoodItem foodItem { get; set; }
+        public int qty { get; set; }
     }
 }

@@ -15,7 +15,7 @@ namespace SA.Models
 
         public DateTime date { get; set; }
 
-        public virtual List<FoodItem> foodItems { get; set; }
+        public virtual List<OrderItem> orderItems { get; set; }
         public states states { get; set; }
     }
 
