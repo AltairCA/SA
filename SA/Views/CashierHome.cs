@@ -15,7 +15,7 @@ namespace SA.Views
     public partial class CashierHome : Form
     {
         private CashierHomeController cashierHomeController = new CashierHomeController();
-        private Order selectedOrder;
+        private SA.Models.Order selectedOrder;
 
         public CashierHome()
         {
@@ -30,14 +30,19 @@ namespace SA.Views
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Complete Order
-            if(selectedOrder != null)
+            DialogResult dialogResult = MessageBox.Show("Complete Selected Order?", "Warning", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
             {
-                cashierHomeController.completeOrder(selectedOrder);
-            }
-            else
-            {
-                MessageBox.Show("No Order Selected! Please select an Order.");
+                // Complete Order
+                if (selectedOrder != null)
+                {
+                    cashierHomeController.completeOrder(selectedOrder);
+                    tblPendingOrders.DataSource = cashierHomeController.getIncompleteOrders();
+                }
+                else
+                {
+                    MessageBox.Show("No Order Selected! Please select an Order.");
+                }
             }
         }
 
@@ -49,12 +54,19 @@ namespace SA.Views
 
         private void tblPendingOrders_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            selectedOrder = tblPendingOrders.SelectedRows[0].DataBoundItem as Order;
+            selectedOrder = tblPendingOrders.SelectedRows[0].DataBoundItem as SA.Models.Order;
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             cashierHomeController.seedData();
+        }
+
+        private void tblPendingOrders_MouseClick(object sender, MouseEventArgs e)
+        {
+            OrderDataBindingProjection order = tblPendingOrders.SelectedRows[0].DataBoundItem as OrderDataBindingProjection;
+            selectedOrder = cashierHomeController.getOrderForId(order.OrderID);
         }
     }
 }
