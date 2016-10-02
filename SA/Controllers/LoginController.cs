@@ -19,7 +19,10 @@ namespace SA.Controllers
                 User user = context.Users.Where(x => x.email == _email && x.password == _password).FirstOrDefault();
                 AppSession.setCurrentUser(user);
 
-                return true;
+                if (user == null)
+                    return false;
+                else
+                    return true;
             }
             catch(Exception e)
             {
