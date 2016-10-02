@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SA.Models
 {
-    class User
+    public class User
     {
         [Key]
         public int id { get; set; }
