@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SA.Controllers;
 using SA.Views;
-
+using SA.Helpers;
 namespace SA.Views
 {
     public partial class Login : Form
@@ -34,9 +34,27 @@ namespace SA.Views
             if(loginController.login(email, password))
             {
                 // Move into Order/Admin/Cashier
-                CashierHome cashierView = new CashierHome();
+
+                SA.Models.User regsitered = AppSession.getCurrentUser();
                 this.Hide();
-                cashierView.Show();
+                if (regsitered.level == Models.Roles.owner)
+                {
+                    AdminPanel adminPanel = new AdminPanel();
+                    adminPanel.Show();
+                }
+                else if(regsitered.level == Models.Roles.cashier)
+                {
+                    CashierHome cashierView = new CashierHome();
+                   
+                    cashierView.Show();
+                }
+                else
+                {
+                    Order orderView = new Order();
+                    orderView.Show();
+                }
+
+                
             }
             else
             {

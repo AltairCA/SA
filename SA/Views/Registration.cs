@@ -54,7 +54,14 @@ namespace SA.Views
             {
                 role = Roles.customer;
             }
-            RegistrationController.Registration(textBox1.Text, textBox2.Text,role);
+            if(RegistrationController.Registration(textBox1.Text, textBox2.Text, role))
+            {
+                MessageBox.Show("User Created Successfull");
+            }
+            else
+            {
+                MessageBox.Show("Error Occured Contact Administrators");
+            }
 
         }
     }
