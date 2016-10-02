@@ -23,5 +23,11 @@ namespace SA.Views
         {
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Order order = new Order();
+            order.Show();
+        }
     }
 }
