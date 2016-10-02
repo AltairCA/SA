@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SA.Models;
+using SA.Helpers;
 
 namespace SA.Controllers
 {
@@ -30,10 +31,11 @@ namespace SA.Controllers
         {
             FoodItem item = null;
             Order order = null;
+            User user = AppSession.getCurrentUser();
             item = getFoodItem(itemId);
             if(item != null)
             {
-                // order = db.Orders.Where(x=> x.)
+                order = db.Orders.Where(x => x.user.id == user.id).First();
                 return false;
             }
             else
