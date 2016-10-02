@@ -7,7 +7,7 @@ using System.Data.Entity;
 
 namespace SA.Models
 {
-    class AppContext:DbContext
+    public class AppContext:DbContext
     {
         public AppContext()
             :base("AppDbContext")
