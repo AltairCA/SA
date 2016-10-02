@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Controllers\CashierHomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Helpers\AppSession.cs" />
     <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="Migrations\201610011712425_initial userTbale.cs" />
@@ -98,7 +99,7 @@
     </Compile>
     <Compile Include="Views\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
-  	</Compile>
+    </Compile>
     <Compile Include="Views\Registration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,7 +132,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-	</EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
     </EmbeddedResource>
