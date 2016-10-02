@@ -60,6 +60,7 @@
     <Compile Include="Controllers\CashierHomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\OrderDetailController.cs" />
     <Compile Include="Controllers\UpdateItemController.cs" />
     <Compile Include="Helpers\AppSession.cs" />
     <Compile Include="Controllers\RegistrationController.cs" />
@@ -132,7 +133,6 @@
     <Compile Include="Views\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Views\Order.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,7 +145,6 @@
     <Compile Include="Views\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Views\OrderDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,7 +190,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-
     <EmbeddedResource Include="Views\CashierHome.resx">
       <DependentUpon>CashierHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,12 +208,14 @@
     <EmbeddedResource Include="Views\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Views\Order.resx">
       <DependentUpon>Order.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrderDetails.resx">
+      <DependentUpon>OrderDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>

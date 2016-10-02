@@ -29,5 +29,21 @@ namespace SA.Controllers
                 return false;
             }
         }
+
+        public void seedData()
+        {
+            Random rand = new Random();
+
+            for (int i = 0; i < 20; i++)
+            {
+                FoodItem item = new FoodItem();
+                item.price = rand.Next(10, 100);
+                item.qty = rand.Next(10, 100);
+                item.itemName = "item" + rand.Next(10, 100);
+                context.FoodItems.Add(item);
+            }
+
+            context.SaveChanges();
+        }
     }
 }

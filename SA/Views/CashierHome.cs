@@ -30,26 +30,33 @@ namespace SA.Views
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Complete Selected Order?", "Warning", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
+            // Complete Order
+            if (selectedOrder != null)
             {
-                // Complete Order
-                if (selectedOrder != null)
+                DialogResult dialogResult = MessageBox.Show("Complete Selected Order?", "Warning", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
                 {
                     cashierHomeController.completeOrder(selectedOrder);
                     tblPendingOrders.DataSource = cashierHomeController.getIncompleteOrders();
-                }
-                else
-                {
-                    MessageBox.Show("No Order Selected! Please select an Order.");
-                }
+                } 
+            }
+            else
+            {
+                MessageBox.Show("No Order Selected! Please select an Order.");
             }
         }
 
         private void btnViewDetails_Click(object sender, EventArgs e)
         {
-            OrderDetails orderDetails = new OrderDetails();
-            orderDetails.Show();
+            if(selectedOrder != null)
+            {
+                OrderDetails orderDetails = new OrderDetails(selectedOrder);
+                orderDetails.Show();
+            }
+            else
+            {
+                MessageBox.Show("No Order Selected! Please select an Order.");
+            }
         }
 
         private void tblPendingOrders_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -67,6 +74,15 @@ namespace SA.Views
         {
             OrderDataBindingProjection order = tblPendingOrders.SelectedRows[0].DataBoundItem as OrderDataBindingProjection;
             selectedOrder = cashierHomeController.getOrderForId(order.OrderID);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+             DialogResult dialogResult = MessageBox.Show("Are you sure you want to Logout?", "Warning", MessageBoxButtons.YesNo);
+             if (dialogResult == DialogResult.Yes)
+             {
+                 this.Close();
+             }
         }
     }
 }
