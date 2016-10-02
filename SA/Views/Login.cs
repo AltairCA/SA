@@ -35,13 +35,19 @@ namespace SA.Views
             {
                 // Move into Order/Admin/Cashier
                 CashierHome cashierView = new CashierHome();
-                this.Close();
+                this.Hide();
                 cashierView.Show();
             }
             else
             {
                 MessageBox.Show("Failed to Login! Please Try again");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Registration registration = new Registration();
+            registration.Show();
         }
     }
 }

@@ -45,6 +45,7 @@
             this.tblPendingOrders.Size = new System.Drawing.Size(686, 347);
             this.tblPendingOrders.TabIndex = 0;
             this.tblPendingOrders.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblPendingOrders_CellContentClick);
+            this.tblPendingOrders.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tblPendingOrders_MouseClick);
             // 
             // button1
             // 

@@ -17,7 +17,7 @@ namespace SA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CashierHome());
+            Application.Run(new Login());
         }
     }
 }
