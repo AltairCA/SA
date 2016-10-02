@@ -14,5 +14,7 @@ namespace SA.Models
         public int id { get; set; }
         public string itemName { get; set; }
         public float price { get; set; }
+
+        public int qty { get; set; }
     }
 }
