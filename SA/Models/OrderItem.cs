@@ -15,4 +15,11 @@ namespace SA.Models
         public FoodItem foodItem { get; set; }
         public int qty { get; set; }
     }
+    public class OrderItemDTO
+    {
+        
+       
+        public FoodItem foodItem { get; set; }
+        public int qty { get; set; }
+    }
 }
