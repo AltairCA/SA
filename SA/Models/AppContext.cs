@@ -18,6 +18,7 @@ namespace SA.Models
         public DbSet<FoodItem> FoodItems { get; set; }
         public DbSet<Category> Category { get; set; }
         public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
 
     }
 }
