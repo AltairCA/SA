@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SA.Controllers;
+using SA.Views;
 
 namespace SA.Views
 {
@@ -33,6 +34,13 @@ namespace SA.Views
             if(loginController.login(email, password))
             {
                 // Move into Order/Admin/Cashier
+                CashierHome cashierView = new CashierHome();
+                this.Close();
+                cashierView.Show();
+            }
+            else
+            {
+                MessageBox.Show("Failed to Login! Please Try again");
             }
         }
     }
