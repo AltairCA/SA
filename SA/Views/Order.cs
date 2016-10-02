@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SA.Controllers;
 
 namespace SA.Views
 {
@@ -15,6 +16,7 @@ namespace SA.Views
         public Order()
         {
             InitializeComponent();
+
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -30,6 +32,11 @@ namespace SA.Views
         private void tabPage2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tblOrder.DataSource =  OrderController.getOrder();
         }
     }
 }
