@@ -67,5 +67,10 @@ namespace SA.Views
             Registration registration = new Registration();
             registration.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            loginController.seedData();
+        }
     }
 }
