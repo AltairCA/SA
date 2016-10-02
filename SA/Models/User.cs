@@ -15,6 +15,14 @@ namespace SA.Models
         public string userName { get; set; }
         public string email { get; set; }
         public string password { get; set; }
+
+        public Roles level { get; set; }
+    }
+    public enum Roles
+    {
+        customer,
+        cashier,
+        owner
     }
 
     class UserDTO

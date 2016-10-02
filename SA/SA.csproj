@@ -56,12 +56,28 @@
     <Compile Include="Controllers\CashierHomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Helpers\AppSession.cs" />
+    <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="Migrations\201610011712425_initial userTbale.cs" />
     <Compile Include="Migrations\201610011712425_initial userTbale.Designer.cs">
       <DependentUpon>201610011712425_initial userTbale.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610020627141_add level to user.cs" />
+    <Compile Include="Migrations\201610020627141_add level to user.Designer.cs">
+      <DependentUpon>201610020627141_add level to user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610020642187_add food item and category.cs" />
+    <Compile Include="Migrations\201610020642187_add food item and category.Designer.cs">
+      <DependentUpon>201610020642187_add food item and category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610020649129_huge.cs" />
+    <Compile Include="Migrations\201610020649129_huge.Designer.cs">
+      <DependentUpon>201610020649129_huge.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppContext.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\FoodItem.cs" />
+    <Compile Include="Models\Order.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,9 +98,24 @@
     </Compile>
     <Compile Include="Views\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+  	</Compile>
+    <Compile Include="Views\Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Migrations\201610011712425_initial userTbale.resx">
       <DependentUpon>201610011712425_initial userTbale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610020627141_add level to user.resx">
+      <DependentUpon>201610020627141_add level to user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610020642187_add food item and category.resx">
+      <DependentUpon>201610020642187_add food item and category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610020649129_huge.resx">
+      <DependentUpon>201610020649129_huge.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -100,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+	</EmbeddedResource>
+    <EmbeddedResource Include="Views\Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
