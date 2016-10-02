@@ -67,7 +67,23 @@ namespace SA.Views
         }
         private void setOrder()
         {
-            tblOrder.DataSource = OrderController.getOrder().orderItems;
+            List<FoodItemDTO> list = new List<FoodItemDTO>();
+            List<SA.Models.OrderItem> items = OrderController.getOrder().orderItems;
+            float totla = 0;
+            foreach (SA.Models.OrderItem a in items)
+            {
+                list.Add(new FoodItemDTO { itemName = a.foodItem.itemName, qty = a.qty });
+                totla += a.foodItem.price;
+            }
+            tblOrder.DataSource = list;
+
+            txtTotal.Text = System.Convert.ToString(totla);
         }
+    }
+    public class FoodItemDTO
+    {
+        public string itemName;
+        public int qty;
+        
     }
 }

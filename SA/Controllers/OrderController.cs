@@ -42,6 +42,7 @@ namespace SA.Controllers
                 if(order == null)
                 {
                     order = new Order();
+                    order.date = DateTime.Now;
                     order.states = states.newOrder;
                     order.user = dbUser;
                     orderItem = new OrderItem();

@@ -17,4 +17,13 @@ namespace SA.Models
 
         public int qty { get; set; }
     }
+    public class FoodItemDTO
+    {
+    
+       
+        public string itemName { get; set; }
+        public float price { get; set; }
+
+        public int qty { get; set; }
+    }
 }
