@@ -38,5 +38,36 @@ namespace SA.Views
         {
             tblOrder.DataSource =  OrderController.getOrder();
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (OrderController.putItemintoOrder(1))
+            {
+                MessageBox.Show("Item Added to the List");
+            }
+            setOrder();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (OrderController.putItemintoOrder(2))
+            {
+                MessageBox.Show("Item Added to the List");
+            }
+            setOrder();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (OrderController.putItemintoOrder(3))
+            {
+                MessageBox.Show("Item Added to the List");
+            }
+            setOrder();
+        }
+        private void setOrder()
+        {
+            tblOrder.DataSource = OrderController.getOrder().orderItems;
+        }
     }
 }

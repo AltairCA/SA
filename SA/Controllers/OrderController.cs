@@ -47,6 +47,12 @@ namespace SA.Controllers
                     orderItem = new OrderItem();
                     orderItem.foodItem = item;
                     orderItem.qty = 1;
+                    List<OrderItem> itemList = order.orderItems;
+                    if(itemList == null)
+                    {
+                        itemList = new List<OrderItem>();
+                        order.orderItems = itemList;
+                    }
                     order.orderItems.Add(orderItem);
                     db.Orders.Add(order);
                 }else
