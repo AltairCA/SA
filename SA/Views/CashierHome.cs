@@ -15,7 +15,7 @@ namespace SA.Views
     public partial class CashierHome : Form
     {
         private CashierHomeController cashierHomeController = new CashierHomeController();
-        private Order selectedOrder;
+        private SA.Models.Order selectedOrder;
 
         public CashierHome()
         {
@@ -49,7 +49,7 @@ namespace SA.Views
 
         private void tblPendingOrders_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            selectedOrder = tblPendingOrders.SelectedRows[0].DataBoundItem as Order;
+            selectedOrder = tblPendingOrders.SelectedRows[0].DataBoundItem as SA.Models.Order;
         }
 
         private void button3_Click(object sender, EventArgs e)
