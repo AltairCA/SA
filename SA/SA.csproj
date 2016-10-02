@@ -53,8 +53,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AddItemController.cs" />
+    <Compile Include="Controllers\AdminOrdersController.cs" />
+    <Compile Include="Controllers\AdminPanelController.cs" />
+    <Compile Include="Controllers\AdminReportController.cs" />
     <Compile Include="Controllers\CashierHomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\UpdateItemController.cs" />
     <Compile Include="Helpers\AppSession.cs" />
     <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="Migrations\201610011712425_initial userTbale.cs" />
@@ -81,6 +86,30 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\AddItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddItem.Designer.cs">
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AdminPanel.Designer.cs">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AdminOrders.Designer.cs">
+      <DependentUpon>AdminOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AdminReport.Designer.cs">
+      <DependentUpon>AdminReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\CashierHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,12 +127,18 @@
     </Compile>
     <Compile Include="Views\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
-  	</Compile>
+    </Compile>
     <Compile Include="Views\Registration.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UpdateItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UpdateItem.Designer.cs">
+      <DependentUpon>UpdateItem.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Migrations\201610011712425_initial userTbale.resx">
       <DependentUpon>201610011712425_initial userTbale.cs</DependentUpon>
@@ -126,14 +161,29 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\AddItem.resx">
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\adminOrders.resx">
+      <DependentUpon>AdminOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminPanel.resx">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\adminReport.resx">
+      <DependentUpon>AdminReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-	</EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UpdateItem.resx">
+      <DependentUpon>UpdateItem.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
